@@ -1,0 +1,21 @@
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\AsposeSugar\bin\Debug\AsposeSugar.dll
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\AsposeSugar\bin\Debug\AsposeSugar.pdb
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\AsposeSugar\obj\Debug\AsposeSugar.dll
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\AsposeSugar\obj\Debug\AsposeSugar.pdb
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\AsposeSugar\bin\Debug\Aspose.Cells.dll
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\AsposeSugar\bin\Debug\Aspose.Pdf.dll
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\AsposeSugar\bin\Debug\Aspose.Words.dll
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\AsposeSugar\bin\Debug\SyntacticSugar.dll
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\AsposeSugar\bin\Debug\SyntacticSugar.pdb
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\AsposeSugar\bin\Debug\SyntacticSugar.xml
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\AsposeSugar\obj\Debug\AsposeSugar.csprojResolveAssemblyReference.cache
+E:\Code\Git\AsposeSugar\AsposeSugar\bin\Debug\AsposeSugar.dll
+E:\Code\Git\AsposeSugar\AsposeSugar\bin\Debug\AsposeSugar.pdb
+E:\Code\Git\AsposeSugar\AsposeSugar\bin\Debug\Aspose.Cells.dll
+E:\Code\Git\AsposeSugar\AsposeSugar\bin\Debug\Aspose.Pdf.dll
+E:\Code\Git\AsposeSugar\AsposeSugar\bin\Debug\Aspose.Words.dll
+E:\Code\Git\AsposeSugar\AsposeSugar\bin\Debug\SyntacticSugar.dll
+E:\Code\Git\AsposeSugar\AsposeSugar\bin\Debug\SyntacticSugar.pdb
+E:\Code\Git\AsposeSugar\AsposeSugar\bin\Debug\SyntacticSugar.xml
+E:\Code\Git\AsposeSugar\AsposeSugar\obj\Debug\AsposeSugar.dll
+E:\Code\Git\AsposeSugar\AsposeSugar\obj\Debug\AsposeSugar.pdb

@@ -1,0 +1,26 @@
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\Test\bin\Test.dll
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\Test\bin\Test.pdb
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\Test\bin\Aspose.Cells.dll
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\Test\bin\Aspose.Pdf.dll
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\Test\bin\Aspose.Words.dll
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\Test\bin\AsposeSugar.dll
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\Test\bin\SyntacticSugar.dll
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\Test\bin\AsposeSugar.pdb
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\Test\bin\SyntacticSugar.pdb
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\Test\bin\SyntacticSugar.xml
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\Test\obj\Debug\Test.dll
+c:\users\jailall.sun\documents\visual studio 2010\Projects\AsposeSugar\Test\obj\Debug\Test.pdb
+E:\Code\Git\AsposeSugar\Test\bin\Test.dll
+E:\Code\Git\AsposeSugar\Test\bin\Test.pdb
+E:\Code\Git\AsposeSugar\Test\bin\Aspose.Cells.dll
+E:\Code\Git\AsposeSugar\Test\bin\Aspose.Pdf.dll
+E:\Code\Git\AsposeSugar\Test\bin\Aspose.Words.dll
+E:\Code\Git\AsposeSugar\Test\bin\AsposeSugar.dll
+E:\Code\Git\AsposeSugar\Test\bin\SyntacticSugar.dll
+E:\Code\Git\AsposeSugar\Test\bin\AsposeSugar.pdb
+E:\Code\Git\AsposeSugar\Test\bin\SyntacticSugar.pdb
+E:\Code\Git\AsposeSugar\Test\bin\SyntacticSugar.xml
+E:\Code\Git\AsposeSugar\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+E:\Code\Git\AsposeSugar\Test\obj\Debug\Test.dll
+E:\Code\Git\AsposeSugar\Test\obj\Debug\Test.pdb
