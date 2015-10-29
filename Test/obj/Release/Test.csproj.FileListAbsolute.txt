@@ -1,0 +1,14 @@
+E:\Code\Git\AsposeSugar\Test\bin\Test.dll
+E:\Code\Git\AsposeSugar\Test\bin\Test.pdb
+E:\Code\Git\AsposeSugar\Test\bin\Aspose.Cells.dll
+E:\Code\Git\AsposeSugar\Test\bin\Aspose.Pdf.dll
+E:\Code\Git\AsposeSugar\Test\bin\Aspose.Words.dll
+E:\Code\Git\AsposeSugar\Test\bin\AsposeSugar.dll
+E:\Code\Git\AsposeSugar\Test\bin\SyntacticSugar.dll
+E:\Code\Git\AsposeSugar\Test\bin\AsposeSugar.pdb
+E:\Code\Git\AsposeSugar\Test\bin\AsposeSugar.xml
+E:\Code\Git\AsposeSugar\Test\bin\SyntacticSugar.pdb
+E:\Code\Git\AsposeSugar\Test\bin\SyntacticSugar.xml
+E:\Code\Git\AsposeSugar\Test\obj\Release\Test.csprojResolveAssemblyReference.cache
+E:\Code\Git\AsposeSugar\Test\obj\Release\Test.dll
+E:\Code\Git\AsposeSugar\Test\obj\Release\Test.pdb

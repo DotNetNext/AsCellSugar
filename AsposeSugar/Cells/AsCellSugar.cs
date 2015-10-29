@@ -6,6 +6,7 @@ using Aspose.Cells;
 using System.Data;
 using System.Drawing;
 using System.Web;
+using System.IO;
 
 namespace AsposeSugar
 {
@@ -52,9 +53,9 @@ namespace AsposeSugar
                         columns.Add(colItem);
                     }
                     if (i > 0)
-                        workbook.Worksheets.Add("Sheet"+(i+1));
+                        workbook.Worksheets.Add("Sheet" + (i + 1));
                     Worksheet sheet = workbook.Worksheets[i]; //工作表
-                   
+
                     SetSheet(columns, new List<ExcelColumnsGroup>(), dt, sheet);
                 }
             }
@@ -168,8 +169,6 @@ namespace AsposeSugar
             workbook.Save(path);
         }
 
-
-
         /// <summary>
         /// 导出EXCEL并且动态生成多级表头
         /// </summary>
@@ -194,6 +193,181 @@ namespace AsposeSugar
             response.End();
         }
 
+        /// <summary>
+        /// 读取DataTable
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        public DataTable ReadDataTableExcel(string filePath)
+        {
+            var ds = ReadDataSetExcel(filePath);
+            if (ds != null && ds.Tables.Count > 0)
+                return ds.Tables[0];
+            return null;
+        }
+        /// <summary>
+        /// 读取DataDataSet
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        public DataSet ReadDataSetExcel(string filePath)
+        {
+            //返回的Excel数据
+            DataSet dsExcel = new DataSet();
+
+            //创建一个Workbook和Worksheet对象
+            Worksheet wkSheet = null;
+            Workbook wkBook = new Workbook(filePath);
+
+            //遍历读取sheet
+            for (int i = 0; i < wkBook.Worksheets.Count; i++)
+            {
+                wkSheet = wkBook.Worksheets[i];
+
+                //声明DataTable存放sheet
+                DataTable dtTemp = new DataTable();
+                //设置Table名为sheet的名称
+                dtTemp.TableName = wkSheet.Name;
+
+                //遍历行
+                for (int x = 0; x < wkSheet.Cells.MaxDataRow + 1; x++)
+                {
+                    //声明DataRow存放sheet的数据行
+                    DataRow dRow = null;
+
+                    //遍历列
+                    for (int y = 0; y < wkSheet.Cells.MaxDataColumn + 1; y++)
+                    {
+                        //获取单元格的值
+                        string value = wkSheet.Cells[x, y].StringValue.Trim();
+
+                        //如果是第一行，则当作表头
+                        if (x == 0)
+                        {
+                            //设置表头
+                            DataColumn dCol = new DataColumn(value);
+                            dtTemp.Columns.Add(dCol);
+                        }
+
+                        //非第一行，则为数据行
+                        else
+                        {
+                            //每次循环到第一列时，实例DataRow
+                            if (y == 0)
+                            {
+                                dRow = dtTemp.NewRow();
+                            }
+                            //给第Y列赋值
+                            dRow[y] = value;
+                        }
+                    }
+
+                    if (dRow != null)
+                    {
+                        dtTemp.Rows.Add(dRow);
+                    }
+                }
+
+                dsExcel.Tables.Add(dtTemp);
+            }
+
+            //释放对象
+            wkSheet = null;
+            wkBook = null;
+
+            //返回数据
+            return dsExcel;
+
+        }
+
+        /// <summary>
+        /// 读取DataTable
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        public DataTable ReadDataTableExcel(Stream stream)
+        {
+            var ds = ReadDataSetExcel(stream);
+            if (ds != null && ds.Tables.Count > 0)
+                return ds.Tables[0];
+            return null;
+        }
+
+
+        /// <summary>
+        /// 读取DataDataSet
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        public DataSet ReadDataSetExcel(Stream stream)
+        {
+            //返回的Excel数据
+            DataSet dsExcel = new DataSet();
+
+            //创建一个Workbook和Worksheet对象
+            Worksheet wkSheet = null;
+            Workbook wkBook = new Workbook(stream);
+
+            //遍历读取sheet
+            for (int i = 0; i < wkBook.Worksheets.Count; i++)
+            {
+                wkSheet = wkBook.Worksheets[i];
+
+                //声明DataTable存放sheet
+                DataTable dtTemp = new DataTable();
+                //设置Table名为sheet的名称
+                dtTemp.TableName = wkSheet.Name;
+
+                //遍历行
+                for (int x = 0; x < wkSheet.Cells.MaxDataRow + 1; x++)
+                {
+                    //声明DataRow存放sheet的数据行
+                    DataRow dRow = null;
+
+                    //遍历列
+                    for (int y = 0; y < wkSheet.Cells.MaxDataColumn + 1; y++)
+                    {
+                        //获取单元格的值
+                        string value = wkSheet.Cells[x, y].StringValue.Trim();
+
+                        //如果是第一行，则当作表头
+                        if (x == 0)
+                        {
+                            //设置表头
+                            DataColumn dCol = new DataColumn(value);
+                            dtTemp.Columns.Add(dCol);
+                        }
+
+                        //非第一行，则为数据行
+                        else
+                        {
+                            //每次循环到第一列时，实例DataRow
+                            if (y == 0)
+                            {
+                                dRow = dtTemp.NewRow();
+                            }
+                            //给第Y列赋值
+                            dRow[y] = value;
+                        }
+                    }
+
+                    if (dRow != null)
+                    {
+                        dtTemp.Rows.Add(dRow);
+                    }
+                }
+
+                dsExcel.Tables.Add(dtTemp);
+            }
+
+            //释放对象
+            wkSheet = null;
+            wkBook = null;
+
+            //返回数据
+            return dsExcel;
+
+        }
 
 
         private Style _thStyle
@@ -228,7 +402,8 @@ namespace AsposeSugar
 
         private void SetSheet(List<ExcelColumns> columns, List<ExcelColumnsGroup> group, DataTable dt, Worksheet sheet)
         {
-            if (dt.TableName != "Table1") {
+            if (dt.TableName != "Table1")
+            {
                 sheet.Name = dt.TableName;
             }
             Cells cells = sheet.Cells;//单元格

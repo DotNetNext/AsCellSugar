@@ -37,7 +37,7 @@ namespace Test
 
 
 
-
+            var d2t = asr.ReadDataTableExcel(@"C:\Users\jailall.sun\Desktop\月星\最新应聘者导入模板2015102205.xlsx");
 
         }
 
@@ -128,6 +128,8 @@ namespace Test
 
             //导出复杂表头
             asr.ExportColumnsHierarchy("1.xls", columns, group, dt);
+
+            
         }
     }
 }
